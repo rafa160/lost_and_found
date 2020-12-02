@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "335380390622",
+    "firebase_url": "https://found-and-lost-app.firebaseio.com",
+    "project_id": "found-and-lost-app",
+    "storage_bucket": "found-and-lost-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335380390622:android:90242b26d7a869ced9584f",
+        "android_client_info": {
+          "package_name": "com.found_and_lost_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335380390622-d15f0upqqjtrbstkv6424n524efsmn3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCevTb8zOIJeQXnOIn1WG8TlKg0ZMa1IeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335380390622-d15f0upqqjtrbstkv6424n524efsmn3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
