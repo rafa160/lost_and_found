@@ -4,7 +4,7 @@ import 'package:found_and_lost_app/helpers/strings.dart';
 import 'package:found_and_lost_app/helpers/validators.dart';
 import 'package:found_and_lost_app/models/user/user.dart';
 import 'package:found_and_lost_app/models/user/user_manager.dart';
-import 'package:found_and_lost_app/screens/home_screen.dart';
+import 'package:found_and_lost_app/screens/home/home_screen.dart';
 import 'package:found_and_lost_app/screens/root/root_screen.dart';
 import 'package:found_and_lost_app/widgets/backgrounds/background_two.dart';
 import 'package:found_and_lost_app/widgets/buttons/rounded_button.dart';

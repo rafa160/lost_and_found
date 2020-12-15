@@ -13,7 +13,6 @@ abstract class _CreateStore with Store {
 
   final FoundItemService foundItemService;
 
-
   ObservableList images = ObservableList();
 
   @observable
@@ -104,6 +103,8 @@ abstract class _CreateStore with Store {
     item.hideEmail = hideEmail;
     item.hidePhone = hidePhone;
     item.address = address;
+    item.images = images;
+    item.user = user;
     save(item);
   }
 
@@ -124,4 +125,15 @@ abstract class _CreateStore with Store {
   @action
   void setUser(User value) => user = value;
 
+
+  @observable
+  ObservableFuture<FoundItem> results = ObservableFuture.value(new FoundItem());
+
+  @observable
+  ObservableStream<List<FoundItem>> list;
+
+  @action
+  getList() {
+    list = foundItemService.get().asObservable();
+  }
 }

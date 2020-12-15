@@ -162,6 +162,36 @@ mixin _$CreateStore on _CreateStore, Store {
     });
   }
 
+  final _$resultsAtom = Atom(name: '_CreateStore.results');
+
+  @override
+  ObservableFuture<FoundItem> get results {
+    _$resultsAtom.reportRead();
+    return super.results;
+  }
+
+  @override
+  set results(ObservableFuture<FoundItem> value) {
+    _$resultsAtom.reportWrite(value, super.results, () {
+      super.results = value;
+    });
+  }
+
+  final _$listAtom = Atom(name: '_CreateStore.list');
+
+  @override
+  ObservableStream<List<FoundItem>> get list {
+    _$listAtom.reportRead();
+    return super.list;
+  }
+
+  @override
+  set list(ObservableStream<List<FoundItem>> value) {
+    _$listAtom.reportWrite(value, super.list, () {
+      super.list = value;
+    });
+  }
+
   final _$_CreateStoreActionController = ActionController(name: '_CreateStore');
 
   @override
@@ -253,6 +283,17 @@ mixin _$CreateStore on _CreateStore, Store {
   }
 
   @override
+  dynamic getList() {
+    final _$actionInfo = _$_CreateStoreActionController.startAction(
+        name: '_CreateStore.getList');
+    try {
+      return super.getList();
+    } finally {
+      _$_CreateStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 category: ${category},
@@ -262,6 +303,8 @@ title: ${title},
 description: ${description},
 showErros: ${showErros},
 user: ${user},
+results: ${results},
+list: ${list},
 categoryValid: ${categoryValid},
 imagesValid: ${imagesValid},
 titleValid: ${titleValid},

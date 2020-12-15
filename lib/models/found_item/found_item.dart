@@ -8,11 +8,12 @@ enum FoundItemStatus { ACTIVE, DELIVERED, DELETED }
 
 class FoundItem {
   String id;
-  List<String> images;
+  List images;
   String title;
   String description;
   Category category;
   Address address;
+  String city;
   bool hidePhone;
   bool hideEmail;
   FoundItemStatus status = FoundItemStatus.ACTIVE;
@@ -36,23 +37,19 @@ class FoundItem {
     this.user,
     this.views,
     this.reference,
+    this.city
   });
 
   FoundItem.fromDocument(DocumentSnapshot doc) {
     id = doc.documentID;
-    title = doc['name'] as String;
+    title = doc['title'] as String;
+    city = doc['city'] as String;
     description = doc['description'] as String;
+    hideEmail = doc['hide_email'] as bool;
     images =
     List<String>.from(doc.data['images'] as List<dynamic>);
   }
 
-  factory FoundItem.fromDoc(DocumentSnapshot doc) {
-    return FoundItem(
-      title: doc['title'],
-      reference: doc.reference,
-      description: doc['description'],
-    );
-  }
 
   factory FoundItem.fromJson(Map<String, dynamic> json) {
     return FoundItem(

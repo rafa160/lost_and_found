@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:found_and_lost_app/screens/home_screen.dart';
+import 'package:found_and_lost_app/screens/home/home_screen.dart';
 import 'package:found_and_lost_app/screens/lost_and_found/create_item.dart';
 
 class RootScreen extends StatefulWidget {

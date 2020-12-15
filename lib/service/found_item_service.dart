@@ -11,4 +11,7 @@ class FoundItemService {
     return foundItemRepository.save(foundItem);
   }
 
+  Stream<List<FoundItem>> get(){
+    return foundItemRepository.get();
+  }
 }
